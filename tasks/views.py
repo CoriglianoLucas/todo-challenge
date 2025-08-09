@@ -30,7 +30,7 @@ class TaskViewSet(viewsets.ModelViewSet):
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
 
-    @action(detail=True, methods=["put"], url_path="complete")
+    @action(detail=True, methods=["put"], url_path="complete", url_name="complete")
     def mark_complete(self, request, pk=None):
         task = self.get_object()
         task.completed = True
