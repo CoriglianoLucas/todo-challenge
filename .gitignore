@@ -4,3 +4,10 @@ __pycache__/
 
 # Virtual environments
 venvchallenge/
+
+# Logs
+*.log
+logs/
+
+# Database
+db.sqlite3
